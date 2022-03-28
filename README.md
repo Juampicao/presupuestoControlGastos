@@ -4,4 +4,4 @@ cd presupuestario
 
 npm run dev para correr
 
-carpeta propia: cursoReact => presupuesto_react_udemy
+carpeta propia: cursoReact => presupuesto_react_udemy => presupuestario
