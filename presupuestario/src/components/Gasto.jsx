@@ -23,16 +23,9 @@ const diccionarioIConos = {
 
 const Gasto = ({ gasto, setGastoEditar }) => {
 
-  const pruebaGasto = {
-    gasto.categoria,
-    gasto.cantidad,
-    gasto.nombre,
-    gasto.fecha,
-
-   }
   
   const handleEliminar = () => {
-
+console.log("eliminando..")
 }
 
   const handleEditar = () => {
