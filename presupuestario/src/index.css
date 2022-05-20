@@ -7,19 +7,7 @@
     --negro: #000;
 }
 
-/* #botones_eliminar_gasto{
-} */
-/* 
-#botones_editar_gasto{
-    margin-top: 1rem;
-   
-} */
 
-/* #botones_gasto {
-    padding-left: 2rem;
-    padding-right: 2rem;
-
-} */
 body {
     font-size: 1.6rem;
     font-family: "Lato", sans-serif;
@@ -41,8 +29,10 @@ html {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2rem;
 }
+
+@media (min-width: 768px){}
 h2 {
     font-size: 3rem;
 }
@@ -61,7 +51,7 @@ header {
 }
 
 header h1 {
-    padding: 3rem 0;
+    padding: 2rem 0;
     margin: 0;
     color: var(--blanco);
     text-align: center;
@@ -72,7 +62,7 @@ header h1 {
 .formulario {
     width: 95%;
     margin: 0 auto;
-    padding: 10rem 0;
+    padding: 2rem 0;
 }
 @media (min-width: 768px) {
     .formulario {
@@ -163,37 +153,16 @@ header h1 {
 
 .contenedor {
     width: 90%;
-    max-width: 80rem;
-    margin: 0 auto;
+    margin: auto;
+    max-width: 500px;   
 }
+
 .contenedor-presupuesto {
     margin-top: -5rem;
-
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     transform: translateY(5rem);
 }
-.dos-columnas {
-    flex-direction: column;
-}
-.dos-columnas :first-child {
-    margin-bottom: 4rem;
-}
-@media (min-width: 768px) {
-    .dos-columnas {
-        flex-direction: row;
-        align-items: center;
-        gap: 4rem;
-    }
-    .dos-columnas > div {
-        width: 50%;
-    }
-    .dos-columnas :first-child {
-        margin-bottom: 0;
-    }
-}
+
 .formulario input[type="text"].nuevo-presupuesto, 
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
@@ -205,17 +174,19 @@ header h1 {
 }
 
 .contenido-presupuesto {
-    width: 100%;
+    margin: auto;
+    
 }
 .contenido-presupuesto p {
     font-weight: 400;
     color: var(--gris-oscuro);
     font-size: 2.4rem;
-    text-align: center;
+
+
 }
-@media (min-width: 768px) {
-    .contenido-presupuesto p {
-        text-align: left;
+@media (min-width: 250px) {
+    .contenido-presupuesto  {
+        /* text-align: center; */
     }
 }
 .contenido-presupuesto p.negativo,
@@ -226,6 +197,8 @@ header h1 {
     font-weight: 900;
     color: var(--azul);
 }
+
+
 .reset-app {
     border: none;
     background-color: #db2777;
@@ -268,7 +241,9 @@ main {
 }
 
 .listado-gastos {
-    margin-top: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    
 }
 .listado-gastos h2 {
     color: var(--gris-oscuro);
@@ -277,6 +252,7 @@ main {
 .no-gastos {
     text-align: center;
     font-size: 2.2rem;
+    margin-bottom: 2rem;
 }
 
 .gasto {
@@ -284,14 +260,16 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 2rem;
-    width: 100%;
+   width: 90%;
+   margin: 2rem auto;
+
 }
 
 .cantidad-gasto {
     font-size: 2.4rem;
     color: var(--negro);
     font-weight: 900;
+    padding-left: 2rem;
 }
 
 .contenido-gasto {
@@ -319,31 +297,33 @@ main {
 .descripcion-gasto .nombre-gasto {
     color: var(--gris-oscuro);
     font-size: 2.4rem;
-    font-weight: 700;
+    font-weight: 900;
+    text-transform: capitalize;
 }
 .descripcion-gasto .nombre-gasto:hover {
     cursor: pointer;
 }
-.descripcion-gasto .fecha-gasto {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: var(--gris-oscuro);
-}
+
 .descripcion-gasto .fecha-gasto span {
     font-weight: 400;
 }
 
 .nuevo-gasto {
     position: fixed;
-    bottom: 5rem;
-    right: 5rem;
+    bottom: 2rem;
+    right: 2rem;
 }
 
 .nuevo-gasto img {
-    width: 5rem;
+    width: 7rem;
 }
-.nuevo-gasto img:hover {
+
+.nuevo-gasto img:hover{
+    
+transform: scale(1.15);
+  transition-duration: 300ms;
     cursor: pointer;
+  
 }
 
 .modal {
@@ -416,4 +396,77 @@ body .modal {
     align-items: center;
     font-size: 2.4rem;
     text-align: right;
+}
+
+
+
+/* Cambios */
+.descripcion-gasto .fecha-gasto {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gris-oscuro); 
+}
+
+ @media(max-width: 480px) {
+        .descripcion-gasto .fecha-gasto{
+            font-size: 1.5rem;
+        }
+    }
+
+/* DIV GASTOS */
+
+@media (max-width: 480px){
+   .gasto  {
+       display: grid; 
+   }
+   img {
+      height: 85px;
+  }
+  .gasto p {
+      font-size: 2rem;
+  }
+    
+}
+
+
+
+
+/* BOTONES   */
+
+#botones_eliminar_gasto{
+} 
+
+#botones_editar_gasto{
+    margin-top: 1rem;
+   
+} 
+
+ #botones_gasto {
+    padding-left: 2rem;
+    padding-right: 2rem;
+} 
+
+@media (max-width: 480px) {
+    #botones_gasto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .descripcion-gasto {
+        font-size: 10rem;
+    }
+}
+
+
+footer {
+    background-color: black;
+    columns: white;
 }
