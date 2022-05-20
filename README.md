@@ -1,14 +1,10 @@
 # presupuestControlGastos
 
-cd presupuestario
-
 npm run dev para correr
 
-carpeta propia: cursoReact => presupuesto_react_udemy => presupuestario
+carpeta propia: cursoReact => presupuesto_react_udemy
 
-Netlify => Lo subi manual  
-  1) Npm run build desde vscode
-  2) Subir deploy manual =>  carpeta dist sin comando
+Netlify => https://controlatugastos.netlify.app/
 
 FALTA: 
   1) Mas lindo
