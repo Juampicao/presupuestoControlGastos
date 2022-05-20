@@ -30,12 +30,13 @@ html {
 
 h1 {
     font-size: 2rem;
+    font-weight: 900;
 }
 
-@media (min-width: 768px){}
+/* @media (min-width: 768px){}
 h2 {
     font-size: 3rem;
-}
+} */
 
 .sombra {
     box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
@@ -90,6 +91,7 @@ header h1 {
     font-size: 2.8rem;
     text-align: center;
     margin-bottom: 2rem;
+    font-weight: 700;
 }
 
 .formulario input[type="text"],
@@ -163,11 +165,22 @@ header h1 {
     transform: translateY(5rem);
 }
 
+@media (min-width: 768px){}
+h2 {
+    font-size: 3rem;
+}
 .formulario input[type="text"].nuevo-presupuesto, 
 .formulario input[type="number"].nuevo-presupuesto {
-    font-size: 2.8rem;
+    font-size: rem;
     text-align: center;
 }
+
+@media (min-width: 320px){}
+.formulario input[type="text"].nuevo-presupuesto, 
+.formulario input[type="number"].nuevo-presupuesto {
+    font-size: 1.5rem;
+}
+
 
 .contenedor-presupuesto svg {
     width: 25rem;
@@ -352,6 +365,8 @@ transform: scale(1.15);
     transition-duration: 300ms;
     transition-timing-function: ease-in;
     opacity: 0;
+    width: 80%;
+    max-width: 500px;
 }
 .modal label {
     color: var(--blanco);
@@ -464,6 +479,8 @@ body .modal {
         font-size: 10rem;
     }
 }
+
+
 
 
 footer {
