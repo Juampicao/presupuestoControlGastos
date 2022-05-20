@@ -7,7 +7,6 @@
     --negro: #000;
 }
 
-
 body {
     font-size: 1.6rem;
     font-family: "Lato", sans-serif;
@@ -323,12 +322,16 @@ main {
 
 .nuevo-gasto {
     position: fixed;
+    /* bottom: 2rem;
+    right: 2rem; */
     bottom: 2rem;
-    right: 2rem;
+    
+      width: 100%;
 }
 
 .nuevo-gasto img {
     width: 7rem;
+    margin: auto;
 }
 
 .nuevo-gasto img:hover{
@@ -480,10 +483,13 @@ body .modal {
     }
 }
 
-
+header {
+    padding-top: 1rem;
+}
 
 
 footer {
     background-color: black;
     columns: white;
 }
+
